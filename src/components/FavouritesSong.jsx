@@ -1,7 +1,7 @@
-import { Card, Col, Container, ListGroup, ListGroupItem, Row } from "react-bootstrap";
-import { Star } from "react-bootstrap-icons";
+import { Card, Col, Container, Row } from "react-bootstrap";
+//import { Star } from "react-bootstrap-icons";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+//import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const FavouriteSong = () => {
