@@ -66,3 +66,10 @@ ul {
     display: none;
   }
 }
+.main-section {
+  margin-left: 300px;
+}
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(270deg, rgba(2, 0, 36, 1) 0%, rgb(7, 7, 101) 35%, rgb(12, 54, 160) 100%);
+}

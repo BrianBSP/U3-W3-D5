@@ -3,6 +3,7 @@ import "./App.css";
 import MyLeftNav from "./components/MyLeftNav";
 import MyMain from "./components/MyMain";
 import MyFooterPlayer from "./components/MyFooterPlayer";
+import DetailSong from "./components/DetailSong";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <MyLeftNav />
         <Routes>
           <Route path="/" element={<MyMain />} />
+          <Route path="dettagli" element={<DetailSong />} />
           <Route path="/footplayer/:song" element={<MyFooterPlayer />} />
         </Routes>
       </BrowserRouter>

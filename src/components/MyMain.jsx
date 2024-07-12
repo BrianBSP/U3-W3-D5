@@ -1,15 +1,14 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import MySong from "./MySong";
 
 const MyMain = () => {
   const songs = useSelector((state) => state.songs.data);
   console.log(songs);
   return (
-    <Container>
+    <Container className="main-section">
       <Row>
-        <Col xs={12} md={6} lg={3}>
-          {/* {songs.data.map(song=> (<))} */}
-        </Col>
+        <MySong />
       </Row>
     </Container>
   );

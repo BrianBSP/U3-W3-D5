@@ -1,7 +1,7 @@
 import { GET_SONGS } from "../actions";
 
 const initialState = {
-  data: null,
+  data: [],
 };
 const songsReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -10,6 +10,8 @@ const songsReducer = (state = initialState, action) => {
         ...state,
         data: action.payload,
       };
+    default:
+      return state;
   }
 };
 

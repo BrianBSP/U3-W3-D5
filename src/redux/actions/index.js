@@ -1,5 +1,6 @@
 export const ADD_TO_FAVOURITES = "ADD_TO_FAVOURITES";
 export const GET_SONGS = "GET_SONGS";
+export const REMOVE_FROM_FAVOURITE = "REMOVE_FROM_FAVOURITE";
 
 export const getSearchSongAction = (query) => {
   return async (dispatch) => {
