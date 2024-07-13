@@ -1,23 +1,23 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getRockSongsAction } from "../redux/actions";
-import { Card, Col, Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { getHipHopSongsAction } from "../redux/actions";
+import { Card, Col, Container, Row } from "react-bootstrap";
 
-const MyRockClassic = () => {
+const MyHipHop = () => {
   const dispatch = useDispatch();
 
-  const songs = useSelector((state) => state.rockSongs.data);
+  const songs = useSelector((state) => state.hipHopSongs.data);
 
   useEffect(() => {
-    dispatch(getRockSongsAction());
+    dispatch(getHipHopSongsAction());
   }, [dispatch]);
 
   return (
     <Container>
       <Row className="mt-4 ms-5">
         <Col>
-          <h2 className="text-white">Rock Classic</h2>
+          <h2 className="text-white">Hip Hop</h2>
         </Col>
       </Row>
       <Row>
@@ -34,4 +34,4 @@ const MyRockClassic = () => {
     </Container>
   );
 };
-export default MyRockClassic;
+export default MyHipHop;

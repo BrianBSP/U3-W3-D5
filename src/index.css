@@ -77,3 +77,7 @@ body {
   background: transparent;
   font-size: 12px;
 }
+
+.card-main-img {
+  width: 200px;
+}

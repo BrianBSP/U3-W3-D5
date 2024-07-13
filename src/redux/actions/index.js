@@ -3,6 +3,7 @@ export const GET_SONGS = "GET_SONGS";
 export const REMOVE_FROM_FAVOURITE = "REMOVE_FROM_FAVOURITE";
 export const GET_SONGS_QUEEN = "GET_SONGS_QUEEN";
 export const GET_SONGS_KATY_PERRY = "GET_SONGS_KATY_PERRY";
+export const GET_SONGS_EMINEM = "GET_SONGS_EMINEM";
 
 export const getSearchSongAction = (query) => {
   return async (dispatch) => {
@@ -61,6 +62,23 @@ export const getPopSongsAction = () => {
       }
     } catch (error) {
       console.log("error", error);
+    }
+  };
+};
+
+export const getHipHopSongsAction = () => {
+  return async (dispatch) => {
+    try {
+      let resp = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem");
+      if (resp.ok) {
+        let { data } = await resp.json();
+        dispatch({
+          type: GET_SONGS_EMINEM,
+          payload: data,
+        });
+      }
+    } catch (error) {
+      console.log("Error", error);
     }
   };
 };

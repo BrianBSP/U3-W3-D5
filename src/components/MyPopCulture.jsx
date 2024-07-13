@@ -25,8 +25,8 @@ const MyPopCulture = () => {
         {songs.slice(0, 4).map((song) => (
           <Col key={song.album.id}>
             <Card className="border-0 rounded-0 card-main">
-              <Card.Img className="rounded-0 img-fluid" width={200} src={song.album.cover_medium}></Card.Img>
-              <p className="text-white mb-0 mt-2 text-truncate">Track: "{song.title}"</p>
+              <Card.Img className="rounded-0 img-fluid" src={song.album.cover_medium}></Card.Img>
+              <p className="text-white mb-0 mt-2 text-truncate">Track: {`"${song.title}"`}</p>
               <p className="text-white mb-0 text-truncate">Artist: {song.artist.name}</p>
             </Card>
           </Col>

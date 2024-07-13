@@ -4,6 +4,7 @@ import MySong from "./MySong";
 import MyMainLinks from "./MyMainLinks";
 import MyRockClassic from "./MyRockClassic";
 import MyPopCulture from "./MyPopCulture";
+import MyHipHop from "./MyHipHop";
 
 const MyMain = () => {
   const songs = useSelector((state) => state.songs.data);
@@ -21,7 +22,10 @@ const MyMain = () => {
         {/* pop culture "katy pery" */}
         <MyPopCulture />
       </Row>
-      <Row>{/* HipHop "eminem" */}</Row>
+      <Row>
+        {/* HipHop "eminem" */}
+        <MyHipHop />
+      </Row>
       <Row>
         <MySong />
       </Row>
