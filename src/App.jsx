@@ -13,8 +13,9 @@ function App() {
         <Routes>
           <Route path="/" element={<MyMain />} />
           <Route path="dettagli" element={<DetailSong />} />
-          <Route path="/footplayer/:song" element={<MyFooterPlayer />} />
+          {/* <Route path="/footplayer/:song" element={<MyFooterPlayer />} /> */}
         </Routes>
+        <MyFooterPlayer />
       </BrowserRouter>
     </>
   );

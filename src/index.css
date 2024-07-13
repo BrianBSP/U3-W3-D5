@@ -81,3 +81,35 @@ body {
 .card-main-img {
   width: 200px;
 }
+
+/* footer player section */
+.bg-container {
+  height: 5.5rem;
+  background-color: #282828;
+}
+
+.playerControls div {
+  justify-content: space-between;
+}
+
+.playerControls div:first-of-type {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.playerControls a img {
+  width: 14px;
+  margin-top: 1rem;
+  filter: brightness(60%);
+}
+
+.playerControls a:hover {
+  filter: brightness(80%);
+  color: #282828 !important;
+}
+
+.progress {
+  color: white;
+  background-color: #414141;
+  height: 3px;
+}
