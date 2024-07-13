@@ -1,10 +1,11 @@
 import { Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import MySong from "./MySong";
+
 import MyMainLinks from "./MyMainLinks";
 import MyRockClassic from "./MyRockClassic";
 import MyPopCulture from "./MyPopCulture";
 import MyHipHop from "./MyHipHop";
+import MySongList from "./MySongList";
 
 const MyMain = () => {
   const songs = useSelector((state) => state.songs.data);
@@ -27,7 +28,7 @@ const MyMain = () => {
         <MyHipHop />
       </Row>
       <Row>
-        <MySong />
+        <MySongList />
       </Row>
     </Container>
   );

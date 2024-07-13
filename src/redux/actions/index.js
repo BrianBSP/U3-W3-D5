@@ -4,6 +4,8 @@ export const REMOVE_FROM_FAVOURITE = "REMOVE_FROM_FAVOURITE";
 export const GET_SONGS_QUEEN = "GET_SONGS_QUEEN";
 export const GET_SONGS_KATY_PERRY = "GET_SONGS_KATY_PERRY";
 export const GET_SONGS_EMINEM = "GET_SONGS_EMINEM";
+export const GET_SELECTED_ON = "GET_SELECTED_ON";
+export const GET_SELECTED_OFF = "GET_SELECTED_OFF";
 
 export const getSearchSongAction = (query) => {
   return async (dispatch) => {

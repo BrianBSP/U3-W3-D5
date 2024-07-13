@@ -1,7 +1,8 @@
-import { Rewind } from "react-bootstrap-icons";
-import { FastForward } from "react-bootstrap-icons";
+import { SkipBackwardFill } from "react-bootstrap-icons";
+import { SkipForwardFill } from "react-bootstrap-icons";
+import { PlayFill } from "react-bootstrap-icons";
 import { Repeat } from "react-bootstrap-icons";
-import { Play } from "react-bootstrap-icons";
+
 import { Shuffle } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 
@@ -22,19 +23,19 @@ const MyFooterPlayer = () => {
                   {/* </a> */}
                   {/* <a href="#"> */}
                   <Link className="nav-link text-white" to="/">
-                    <Rewind />
+                    <SkipBackwardFill />
                   </Link>
                   {/* <img src="assets/playerbuttons/prev.png" alt="prev" /> */}
                   {/* </a> */}
                   {/* <a href="#"> */}
                   <Link className="nav-link text-white" to="/">
-                    <Play />
+                    <PlayFill />
                   </Link>
                   {/* <img src="assets/playerbuttons/play.png" alt="play" /> */}
                   {/* </a> */}
                   {/* <a href="#"> */}
                   <Link className="nav-link text-white" to="/">
-                    <FastForward />
+                    <SkipForwardFill />
                   </Link>
                   {/* <img src="assets/playerbuttons/next.png" alt="next" /> */}
                   {/* </a> */}
