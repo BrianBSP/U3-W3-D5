@@ -80,7 +80,7 @@ body {
 }
 
 .card-main-img {
-  width: 200px;
+  cursor: pointer;
 }
 
 /* footer player section */

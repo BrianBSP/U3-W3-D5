@@ -6,6 +6,7 @@ export const GET_SONGS_KATY_PERRY = "GET_SONGS_KATY_PERRY";
 export const GET_SONGS_EMINEM = "GET_SONGS_EMINEM";
 export const GET_SELECTED_ON = "GET_SELECTED_ON";
 export const GET_SELECTED_OFF = "GET_SELECTED_OFF";
+export const SELECT_SONG = "SELECT_SONG";
 
 export const getSearchSongAction = (query) => {
   return async (dispatch) => {
@@ -17,10 +18,6 @@ export const getSearchSongAction = (query) => {
           type: GET_SONGS,
           payload: data,
         });
-        /* let musicSection = document.querySelector(querySelector);
-        for (let i = 0; i < 4; i++) {
-          musicSection.innerHTML += albumCard(data[i]);
-        } */
       } else {
         throw new Error("Error in fetching songs");
       }
@@ -84,3 +81,5 @@ export const getHipHopSongsAction = () => {
     }
   };
 };
+
+export const selectSongAction = (song) => ({ type: SELECT_SONG, payload: song });

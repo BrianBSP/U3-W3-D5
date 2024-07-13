@@ -1,18 +1,31 @@
+import { Col } from "react-bootstrap";
 import { SkipBackwardFill } from "react-bootstrap-icons";
 import { SkipForwardFill } from "react-bootstrap-icons";
 import { PlayFill } from "react-bootstrap-icons";
 import { Repeat } from "react-bootstrap-icons";
 
 import { Shuffle } from "react-bootstrap-icons";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const MyFooterPlayer = () => {
+  const songSelected = useSelector((state) => state.songSelected.songObj);
+
   return (
     <>
       <div className="container-fluid fixed-bottom bg-container pt-1">
         <div className="row h-100">
           <div className="col-lg-10 offset-lg-2">
             <div className="row h-100 flex-column justify-content-center align-items-center">
+              <Col className="d-flex">
+                <div>
+                  <img src={songSelected.album.cover_medium} alt={songSelected.title} width={80} />
+                </div>
+                <div>
+                  <p className="text-white mb-0 mt-2 text-truncate">Track: {`"${songSelected.title}"`}</p>
+                  <p className="text-white mb-0 text-truncate">Artist: {songSelected.artist.name}</p>
+                </div>
+              </Col>
               <div className="col-6 col-md-4 playerControls">
                 <div className="d-flex">
                   {/* <a href="#"> */}
