@@ -9,7 +9,7 @@ const DetailSong = () => {
       <Row>
         <Col>
           <h1 className="text-white">
-            Dettagli <strong>{songSelected.title}</strong>
+            Dettagli di: <strong>{songSelected.title}</strong>
           </h1>
         </Col>
       </Row>
