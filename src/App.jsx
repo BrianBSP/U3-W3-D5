@@ -5,22 +5,20 @@ import MyMain from "./components/MyMain";
 import MyFooterPlayer from "./components/MyFooterPlayer";
 import DetailSong from "./components/DetailSong";
 import FavouriteSong from "./components/FavouritesSong";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <MyLeftNav />
-        <Routes>
-          <Route path="/" element={<MyMain />} />
-          <Route path="dettagli" element={<DetailSong />} />
-          <Route path="preferiti" element={<FavouriteSong />} />
-
-          {/* <Route path="/footplayer/:song" element={<MyFooterPlayer />} /> */}
-        </Routes>
-        <MyFooterPlayer />
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <MyLeftNav />
+      <Routes>
+        <Route path="/" element={<MyMain />} />
+        <Route path="detail/:song" element={<DetailSong />} />
+        <Route path="preferiti" element={<FavouriteSong />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <MyFooterPlayer />
+    </BrowserRouter>
   );
 }
 

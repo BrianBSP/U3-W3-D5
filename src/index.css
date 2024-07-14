@@ -114,3 +114,13 @@ body {
   background-color: #414141;
   height: 3px;
 }
+/* detail component */
+
+.card-detail {
+  background-color: transparent;
+  max-width: 500px;
+}
+
+.card-detail-img {
+  width: 100%;
+}
