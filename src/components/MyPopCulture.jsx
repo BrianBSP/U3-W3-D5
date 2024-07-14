@@ -11,6 +11,8 @@ const MyPopCulture = () => {
 
   const songs = useSelector((state) => state.popSongs.data);
 
+  console.log(songs);
+
   useEffect(() => {
     dispatch(getPopSongsAction());
   }, [dispatch]);

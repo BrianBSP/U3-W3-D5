@@ -1,15 +1,17 @@
-import { Card, Col, Container, Row } from "react-bootstrap";
-//import { Star } from "react-bootstrap-icons";
+import { Col, Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
 //import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
+import MyLeftNav from "./MyLeftNav";
+import MySong from "./MySong";
 
 const FavouriteSong = () => {
-  const favourites = useSelector((state) => state.list.data);
-  const navigate = useNavigate();
+  const favourites = useSelector((state) => state.favourites.list);
+  //const navigate = useNavigate();
 
   return (
     <Container>
+      <MyLeftNav />
       <Row>
         <Col>
           <h2>Preferiti</h2>
@@ -17,11 +19,10 @@ const FavouriteSong = () => {
       </Row>
       <Row>
         <Col>
-          {favourites.map((fav, i) => (
-            <Card key={i} onClick={() => navigate(`/detail/${fav.title}`)}>
-              <Card.Img src={fav.album.cover}></Card.Img>
-              <Card.Text>{fav.title}</Card.Text>
-            </Card>
+          {favourites.map((song) => (
+            <Col xs={12} md={6} lg={3} key={song.album.id} className="gy-2">
+              <MySong song={song} />
+            </Col>
           ))}
         </Col>
       </Row>
@@ -29,3 +30,9 @@ const FavouriteSong = () => {
   );
 };
 export default FavouriteSong;
+{
+  /* <Card key={i} onClick={() => navigate(`/detail/${fav.title}`)}>
+              <Card.Img src={fav.album.cover}></Card.Img>
+              <Card.Text>{fav.title}</Card.Text>
+            </Card> */
+}

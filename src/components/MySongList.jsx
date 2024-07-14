@@ -14,7 +14,7 @@ const MySongList = () => {
       </Row>
       <Row>
         {songs.map((song) => (
-          <Col xs={12} md={6} lg={3} key={song.id} className="gy-2">
+          <Col xs={12} md={6} lg={3} key={song.album.id} className="gy-2">
             <MySong song={song} />
           </Col>
         ))}

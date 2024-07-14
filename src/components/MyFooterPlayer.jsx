@@ -5,11 +5,13 @@ import { PlayFill } from "react-bootstrap-icons";
 import { Repeat } from "react-bootstrap-icons";
 
 import { Shuffle } from "react-bootstrap-icons";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const MyFooterPlayer = () => {
   const songSelected = useSelector((state) => state.songSelected.songObj);
+  const navigate = useNavigate();
   console.log(songSelected);
 
   return (
@@ -17,15 +19,15 @@ const MyFooterPlayer = () => {
       <div className="container-fluid fixed-bottom bg-container pt-1">
         <div className="row h-100">
           <div className="col-lg-10 offset-lg-2">
-            <div className="row h-100 flex-column justify-content-center align-items-center">
+            <div className="row h-100  justify-content-center align-items-center">
               {songSelected ? (
-                <Col className="d-flex">
+                <Col onClick={() => navigate(`/detail/${songSelected.title}`)} className="d-flex">
                   <div>
                     <img src={songSelected.album.cover_medium} alt={songSelected.title} width={80} />
                   </div>
                   <div>
-                    <p className="text-white mb-0 mt-2 text-truncate">Track: {`"${songSelected.title}"`}</p>
-                    <p className="text-white mb-0 text-truncate">Artist: {songSelected.artist.name}</p>
+                    <p className="text-white ms-2 mb-0 mt-2 text-truncate">Track: {`"${songSelected.title}"`}</p>
+                    <p className="text-white ms-2 mb-0 text-truncate">Artist: {songSelected.artist.name}</p>
                   </div>
                 </Col>
               ) : (

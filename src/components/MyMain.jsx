@@ -1,5 +1,4 @@
 import { Container, Row } from "react-bootstrap";
-import { useSelector } from "react-redux";
 
 import MyMainLinks from "./MyMainLinks";
 import MyRockClassic from "./MyRockClassic";
@@ -8,8 +7,6 @@ import MyHipHop from "./MyHipHop";
 import MySongList from "./MySongList";
 
 const MyMain = () => {
-  const songs = useSelector((state) => state.songs.data);
-  console.log(songs);
   return (
     <Container className="main-section">
       <Row>

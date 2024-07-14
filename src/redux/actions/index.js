@@ -83,3 +83,6 @@ export const getHipHopSongsAction = () => {
 };
 
 export const selectSongAction = (song) => ({ type: SELECT_SONG, payload: song });
+
+export const addToFavouriteaction = (song) => ({ type: ADD_TO_FAVOURITES, payload: song });
+export const removeFromFavouriteAction = (song) => ({ type: REMOVE_FROM_FAVOURITE, payload: song });

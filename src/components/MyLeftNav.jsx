@@ -33,7 +33,7 @@ const MyLeftNav = () => {
               <HouseFill className="me-2" />
               Home
             </Link>
-            <Link className="nav-link">
+            <Link to="/preferiti" className="nav-link">
               <BookFill className="me-2" />
               Your Library
             </Link>

@@ -9,7 +9,7 @@ const favouriteReducer = (state = initialState, action) => {
     case ADD_TO_FAVOURITES:
       return {
         ...state,
-        list: [...state.list, action.payload],
+        list: action.payload,
       };
     case REMOVE_FROM_FAVOURITE:
       return {
